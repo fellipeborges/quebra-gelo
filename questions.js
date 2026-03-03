@@ -37,15 +37,15 @@ const questions = [
     "Qual é a comida que te lembra infância?",
     "Se sua vida fosse um filme, qual seria o gênero?",
     "Qual foi a maior lição que você aprendeu com um erro?",
-    "Se você pudesse acordar amanhã com uma nova habilidade, qual seria?",
     "Qual foi o momento mais engraçado que você já passou?",
     "O que você faria se não tivesse medo de falhar?",
-    "Qual foi o momento mais marcante da sua vida até agora?",
     "Que livro ou filme mudou sua perspectiva sobre a vida?",
     "Como você se imagina daqui a 10 anos?",
     "Qual é a sua lembrança favorita da infância?",
     "Qual parte da sua personalidade você mais protege?",
     "Quando você se sente mais você mesmo?",
     "Qual legado você gostaria de deixar no mundo?",
-    "O que você aprendeu sobre relacionamentos observando seus pais?"
+    "O que você aprendeu sobre relacionamentos observando seus pais?",
+    "Se você pudesse viver em qualquer cidade do mundo, qual escolheria?",
+    "Qual foi o melhor show ou evento ao vivo que você já foi?"
 ];
