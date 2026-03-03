@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quebra Gelo</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧊</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="question" id="question"></p>
+        <button class="btn" id="btn" onclick="pickQuestion()">Nova Pergunta</button>
+        <p class="hint">ou pressione <kbd>espaço</kbd></p>
+    </div>
+
+    <script src="questions.js"></script>
+    <script>
+        let currentQuestion = -1;
+        const questionElement = document.getElementById('question');
+        const btnElement = document.getElementById('btn');
+
+        function pickQuestion() {
+            let next;
+            do {
+                next = Math.floor(Math.random() * questions.length);
+            } while (next === currentQuestion && questions.length > 1);
+            
+            currentQuestion = next;
+            
+            questionElement.classList.add('fade-out');
+            
+            setTimeout(() => {
+                questionElement.textContent = questions[next];
+                questionElement.classList.remove('fade-out');
+            }, 200);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                btnElement.classList.add('active');
+                pickQuestion();
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.code === 'Space') {
+                btnElement.classList.remove('active');
+            }
+        });
+
+        pickQuestion();
+    </script>
+</body>
+</html>

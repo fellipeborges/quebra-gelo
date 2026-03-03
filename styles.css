@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --btn-bg: #111111;
+    --btn-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #111111;
+        --text: #ffffff;
+        --btn-bg: #ffffff;
+        --btn-text: #111111;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.question {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 48px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.question.fade-out {
+    opacity: 0;
+}
+
+.btn {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active,
+.btn.active {
+    opacity: 0.6;
+}
+
+.hint {
+    display: none;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .hint {
+        display: block;
+    }
+}
+
+kbd {
+    display: inline-block;
+    padding: 2px 8px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+}
