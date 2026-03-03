@@ -91,3 +91,19 @@ kbd {
     border: 1px solid currentColor;
     border-radius: 4px;
 }
+
+.github-link {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+}
+
+.github-link:hover {
+    opacity: 0.6;
+}
