@@ -30,12 +30,14 @@
             
             currentQuestion = next;
             
-            questionElement.classList.add('fade-out');
+            questionElement.classList.remove('enter');
+            questionElement.classList.add('exit');
             
             setTimeout(() => {
                 questionElement.textContent = questions[next];
-                questionElement.classList.remove('fade-out');
-            }, 200);
+                questionElement.classList.remove('exit');
+                questionElement.classList.add('enter');
+            }, 150);
         }
 
         document.addEventListener('keydown', (e) => {
