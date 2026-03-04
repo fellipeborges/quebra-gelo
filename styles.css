@@ -122,6 +122,26 @@ kbd {
     border-radius: 4px;
 }
 
+.lang-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: 1px solid currentColor;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.lang-toggle:hover {
+    opacity: 1;
+}
+
 .github-link {
     position: fixed;
     bottom: 16px;

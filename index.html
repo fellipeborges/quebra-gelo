@@ -8,33 +8,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">EN</button>
+
     <div class="container">
         <p class="question" id="question"></p>
-        <button class="btn" id="btn" onclick="pickQuestion()">Nova Pergunta</button>
-        <p class="hint">ou pressione <kbd>espaço</kbd></p>
+        <button class="btn" id="btn" onclick="pickQuestion()">Nova pergunta</button>
+        <p class="hint" id="hint">ou pressione <kbd id="hint-key">espaço</kbd></p>
     </div>
 
-    <a href="https://github.com/fellipeborges/quebra-gelo" target="_blank" class="github-link">Código fonte</a>
+    <a href="https://github.com/fellipeborges/quebra-gelo" target="_blank" class="github-link" id="footer-link">Código fonte</a>
 
+    <script src="i18n.js"></script>
     <script src="questions.js"></script>
     <script>
         let currentQuestion = -1;
+        let currentLang = localStorage.getItem('lang') || 'pt';
+
         const questionElement = document.getElementById('question');
         const btnElement = document.getElementById('btn');
+        const hintElement = document.getElementById('hint');
+        const hintKeyElement = document.getElementById('hint-key');
+        const footerLink = document.getElementById('footer-link');
+        const langToggle = document.getElementById('lang-toggle');
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            document.title = ui[lang].title;
+            btnElement.textContent = ui[lang].btn;
+            hintElement.innerHTML = ui[lang].hint + ' <kbd id="hint-key">' + ui[lang].key + '</kbd>';
+            footerLink.textContent = ui[lang].footer;
+            langToggle.textContent = lang === 'pt' ? 'EN' : 'PT';
+
+            currentQuestion = -1;
+            pickQuestion();
+        }
+
+        function toggleLanguage() {
+            setLanguage(currentLang === 'pt' ? 'en' : 'pt');
+        }
 
         function pickQuestion() {
+            const pool = questions[currentLang];
             let next;
             do {
-                next = Math.floor(Math.random() * questions.length);
-            } while (next === currentQuestion && questions.length > 1);
-            
+                next = Math.floor(Math.random() * pool.length);
+            } while (next === currentQuestion && pool.length > 1);
+
             currentQuestion = next;
-            
+
             questionElement.classList.remove('enter');
             questionElement.classList.add('exit');
-            
+
             setTimeout(() => {
-                questionElement.textContent = questions[next];
+                questionElement.textContent = pool[next];
                 questionElement.classList.remove('exit');
                 questionElement.classList.add('enter');
             }, 150);
@@ -54,7 +83,7 @@
             }
         });
 
-        pickQuestion();
+        setLanguage(currentLang);
     </script>
 </body>
 </html>
