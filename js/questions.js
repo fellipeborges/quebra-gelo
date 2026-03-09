@@ -490,5 +490,530 @@ const questions = [
             fr: "Quel est le meilleur concert ou événement en direct auquel vous ayez assisté ?",
             zh: "你参加过的最棒的演唱会或现场活动是什么？"
         }
+    },
+
+    // ── hypothetical (new) ──────────────────────────────────────────
+
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Se você pudesse falar qualquer idioma fluentemente da noite para o dia, qual escolheria?",
+            en: "If you could fluently speak any language overnight, which would you choose?",
+            es: "Si pudieras hablar cualquier idioma con fluidez de la noche a la mañana, ¿cuál elegirías?",
+            fr: "Si vous pouviez parler couramment n'importe quelle langue du jour au lendemain, laquelle choisiriez-vous ?",
+            zh: "如果你能一夜之间流利地说任何语言，你会选择哪种？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Se você pudesse trocar de vida com alguém por um dia, quem seria?",
+            en: "If you could swap lives with someone for a day, who would it be?",
+            es: "Si pudieras intercambiar tu vida con alguien por un día, ¿quién sería?",
+            fr: "Si vous pouviez échanger votre vie avec quelqu'un pour une journée, qui choisiriez-vous ?",
+            zh: "如果你能和某人交换一天的生活，你会选谁？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Você preferiria ser invisível ou poder ler mentes?",
+            en: "Would you rather be invisible or be able to read minds?",
+            es: "¿Preferirías ser invisible o poder leer mentes?",
+            fr: "Préféreriez-vous être invisible ou pouvoir lire dans les pensées ?",
+            zh: "你更愿意隐身还是能读心术？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Se você pudesse criar uma lei que todos teriam que seguir, qual seria?",
+            en: "If you could create one law that everyone had to follow, what would it be?",
+            es: "Si pudieras crear una ley que todos tuvieran que seguir, ¿cuál sería?",
+            fr: "Si vous pouviez créer une loi que tout le monde devrait suivre, quelle serait-elle ?",
+            zh: "如果你能制定一条所有人都必须遵守的法律，它会是什么？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Você preferiria nunca mais precisar dormir ou nunca mais precisar comer?",
+            en: "Would you rather never need to sleep again or never need to eat again?",
+            es: "¿Preferirías no necesitar dormir nunca más o no necesitar comer nunca más?",
+            fr: "Préféreriez-vous ne plus jamais avoir besoin de dormir ou ne plus jamais avoir besoin de manger ?",
+            zh: "你更愿意永远不用睡觉还是永远不用吃饭？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Você preferiria poder voar ou poder se teletransportar?",
+            en: "Would you rather be able to fly or be able to teleport?",
+            es: "¿Preferirías poder volar o poder teletransportarte?",
+            fr: "Préféreriez-vous pouvoir voler ou pouvoir vous téléporter ?",
+            zh: "你更愿意能飞还是能瞬间移动？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Se uma bola de cristal pudesse revelar uma verdade sobre seu futuro, o que você gostaria de saber?",
+            en: "If a crystal ball could reveal one truth about your future, what would you want to know?",
+            es: "Si una bola de cristal pudiera revelar una verdad sobre tu futuro, ¿qué te gustaría saber?",
+            fr: "Si une boule de cristal pouvait révéler une vérité sur votre avenir, que voudriez-vous savoir ?",
+            zh: "如果一个水晶球能揭示关于你未来的一个真相，你想知道什么？"
+        }
+    },
+    {
+        category: 'hypothetical',
+        i18n: {
+            pt: "Se você pudesse viver dentro de qualquer série, filme ou jogo, qual escolheria?",
+            en: "If you could live inside any TV show, movie, or game, which would you choose?",
+            es: "Si pudieras vivir dentro de cualquier serie, película o juego, ¿cuál elegirías?",
+            fr: "Si vous pouviez vivre dans n'importe quelle série, film ou jeu, lequel choisiriez-vous ?",
+            zh: "如果你能生活在任何电视剧、电影或游戏中，你会选哪个？"
+        }
+    },
+
+    // ── fun (new) ───────────────────────────────────────────────────
+
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual é o talento mais inútil que você tem?",
+            en: "What's the most useless talent you have?",
+            es: "¿Cuál es el talento más inútil que tienes?",
+            fr: "Quel est le talent le plus inutile que vous possédez ?",
+            zh: "你拥有的最没用的才能是什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual foi a maior mentira inocente que você já contou?",
+            en: "What's the biggest white lie you've ever told?",
+            es: "¿Cuál es la mayor mentira piadosa que has contado?",
+            fr: "Quel est le plus gros mensonge innocent que vous ayez jamais raconté ?",
+            zh: "你说过最大的善意谎言是什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Você canta no chuveiro? Qual é a sua música preferida para isso?",
+            en: "Do you sing in the shower? What's your go-to song?",
+            es: "¿Cantas en la ducha? ¿Cuál es tu canción preferida para eso?",
+            fr: "Chantez-vous sous la douche ? Quelle est votre chanson préférée pour ça ?",
+            zh: "你在淋浴时唱歌吗？你最喜欢唱什么歌？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual é a sua melhor imitação?",
+            en: "What's your best impression or impersonation?",
+            es: "¿Cuál es tu mejor imitación?",
+            fr: "Quelle est votre meilleure imitation ?",
+            zh: "你最拿手的模仿是什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual é a coisa mais estranha que você já pesquisou na internet?",
+            en: "What's the strangest thing you've ever searched for on the internet?",
+            es: "¿Cuál es la cosa más extraña que has buscado en internet?",
+            fr: "Quelle est la chose la plus étrange que vous ayez jamais cherchée sur internet ?",
+            zh: "你在网上搜过最奇怪的东西是什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Já mandou uma mensagem para a pessoa errada? O que aconteceu?",
+            en: "Have you ever sent a text to the wrong person? What happened?",
+            es: "¿Alguna vez enviaste un mensaje a la persona equivocada? ¿Qué pasó?",
+            fr: "Avez-vous déjà envoyé un message à la mauvaise personne ? Que s'est-il passé ?",
+            zh: "你有没有把消息发错人过？发生了什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual foi a situação mais constrangedora que você já viveu em público?",
+            en: "What's the most embarrassing situation you've experienced in public?",
+            es: "¿Cuál fue la situación más vergonzosa que viviste en público?",
+            fr: "Quelle est la situation la plus embarrassante que vous ayez vécue en public ?",
+            zh: "你在公共场合经历过最尴尬的事是什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Se você tivesse que comer apenas um alimento pelo resto da vida, qual seria?",
+            en: "If you had to eat only one food for the rest of your life, what would it be?",
+            es: "Si tuvieras que comer solo un alimento por el resto de tu vida, ¿cuál sería?",
+            fr: "Si vous deviez manger un seul aliment pour le reste de votre vie, lequel serait-ce ?",
+            zh: "如果你余生只能吃一种食物，你会选什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Já fingiu não estar em casa quando alguém tocou a campainha?",
+            en: "Have you ever pretended not to be home when someone rang the doorbell?",
+            es: "¿Alguna vez fingiste no estar en casa cuando alguien tocó el timbre?",
+            fr: "Avez-vous déjà fait semblant de ne pas être chez vous quand quelqu'un a sonné ?",
+            zh: "有人按门铃时你有没有假装不在家？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual é a pior piada que você sabe, mas conta mesmo assim?",
+            en: "What's the worst joke you know but tell anyway?",
+            es: "¿Cuál es el peor chiste que sabes pero cuentas de todas formas?",
+            fr: "Quelle est la pire blague que vous connaissez mais racontez quand même ?",
+            zh: "你知道最冷的笑话是什么（但你还是会讲）？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Já riu em uma hora totalmente inapropriada? O que aconteceu?",
+            en: "Have you ever laughed at a totally inappropriate moment? What happened?",
+            es: "¿Alguna vez te reíste en un momento totalmente inapropiado? ¿Qué pasó?",
+            fr: "Avez-vous déjà ri à un moment totalement inapproprié ? Que s'est-il passé ?",
+            zh: "你有没有在完全不合适的时候笑出来？发生了什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual foi o apelido mais estranho que você já teve?",
+            en: "What's the strangest nickname you've ever had?",
+            es: "¿Cuál es el apodo más extraño que has tenido?",
+            fr: "Quel est le surnom le plus étrange que vous ayez jamais eu ?",
+            zh: "你有过最奇怪的绰号是什么？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual moda ou trend do passado você seguiu e hoje tem vergonha?",
+            en: "What past trend or fashion did you follow that you're embarrassed about today?",
+            es: "¿Qué moda o tendencia del pasado seguiste y hoy te avergüenza?",
+            fr: "Quelle mode ou tendance du passé avez-vous suivie et dont vous avez honte aujourd'hui ?",
+            zh: "你过去追过什么潮流或时尚，现在觉得很丢脸？"
+        }
+    },
+    {
+        category: 'fun',
+        i18n: {
+            pt: "Qual é a coisa mais engraçada que uma criança já te disse?",
+            en: "What's the funniest thing a child has ever said to you?",
+            es: "¿Cuál es la cosa más graciosa que un niño te ha dicho?",
+            fr: "Quelle est la chose la plus drôle qu'un enfant vous ait jamais dite ?",
+            zh: "小孩子对你说过最搞笑的话是什么？"
+        }
+    },
+
+    // ── experiences (new) ───────────────────────────────────────────
+
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a coisa mais corajosa que você já fez?",
+            en: "What's the bravest thing you've ever done?",
+            es: "¿Cuál es la cosa más valiente que has hecho?",
+            fr: "Quelle est la chose la plus courageuse que vous ayez jamais faite ?",
+            zh: "你做过最勇敢的事是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Já conheceu alguém famoso? Como foi?",
+            en: "Have you ever met someone famous? What was it like?",
+            es: "¿Alguna vez conociste a alguien famoso? ¿Cómo fue?",
+            fr: "Avez-vous déjà rencontré quelqu'un de célèbre ? Comment c'était ?",
+            zh: "你见过名人吗？感觉如何？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a refeição mais memorável da sua vida?",
+            en: "What was the most memorable meal of your life?",
+            es: "¿Cuál fue la comida más memorable de tu vida?",
+            fr: "Quel a été le repas le plus mémorable de votre vie ?",
+            zh: "你人生中最难忘的一顿饭是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Já fez algo que jurou que nunca faria?",
+            en: "Have you ever done something you swore you'd never do?",
+            es: "¿Alguna vez hiciste algo que juraste que nunca harías?",
+            fr: "Avez-vous déjà fait quelque chose que vous aviez juré de ne jamais faire ?",
+            zh: "你有没有做过自己发誓绝不会做的事？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a experiência mais marcante que você teve com um desconhecido?",
+            en: "What's the most memorable experience you've had with a stranger?",
+            es: "¿Cuál fue la experiencia más memorable que tuviste con un desconocido?",
+            fr: "Quelle est l'expérience la plus marquante que vous ayez eue avec un inconnu ?",
+            zh: "你和陌生人之间最难忘的经历是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a maior mudança que você já fez na sua vida?",
+            en: "What's the biggest change you've ever made in your life?",
+            es: "¿Cuál fue el mayor cambio que has hecho en tu vida?",
+            fr: "Quel est le plus grand changement que vous ayez jamais fait dans votre vie ?",
+            zh: "你在生活中做过的最大改变是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual é a história mais inacreditável que aconteceu com você?",
+            en: "What's the most unbelievable story that has happened to you?",
+            es: "¿Cuál es la historia más increíble que te ha pasado?",
+            fr: "Quelle est l'histoire la plus incroyable qui vous soit arrivée ?",
+            zh: "发生在你身上最不可思议的故事是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Já passou por uma situação em que a sorte te salvou?",
+            en: "Have you ever been in a situation where luck saved you?",
+            es: "¿Alguna vez estuviste en una situación en la que la suerte te salvó?",
+            fr: "Avez-vous déjà vécu une situation où la chance vous a sauvé ?",
+            zh: "你有没有经历过运气救了你的时刻？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi o trabalho ou projeto que mais te deu orgulho?",
+            en: "What job or project are you most proud of?",
+            es: "¿Cuál fue el trabajo o proyecto del que más te sientes orgulloso(a)?",
+            fr: "Quel travail ou projet vous a rendu le/la plus fier/fière ?",
+            zh: "你最引以为豪的工作或项目是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Já fez uma viagem sozinho(a)? Como foi a experiência?",
+            en: "Have you ever traveled alone? How was the experience?",
+            es: "¿Alguna vez viajaste solo(a)? ¿Cómo fue la experiencia?",
+            fr: "Avez-vous déjà voyagé seul(e) ? Comment était l'expérience ?",
+            zh: "你独自旅行过吗？体验如何？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi o hobby mais inusitado que você já tentou?",
+            en: "What's the most unusual hobby you've ever tried?",
+            es: "¿Cuál es el pasatiempo más inusual que has intentado?",
+            fr: "Quel est le loisir le plus inhabituel que vous ayez jamais essayé ?",
+            zh: "你尝试过最不寻常的爱好是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a coisa mais difícil que você já aprendeu a fazer?",
+            en: "What's the hardest thing you've ever learned to do?",
+            es: "¿Cuál es la cosa más difícil que has aprendido a hacer?",
+            fr: "Quelle est la chose la plus difficile que vous ayez apprise à faire ?",
+            zh: "你学过最难的事情是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Já participou de algo competitivo? Como foi?",
+            en: "Have you ever participated in something competitive? How did it go?",
+            es: "¿Alguna vez participaste en algo competitivo? ¿Cómo te fue?",
+            fr: "Avez-vous déjà participé à quelque chose de compétitif ? Comment ça s'est passé ?",
+            zh: "你参加过什么竞赛吗？结果如何？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a coisa mais legal que você fez recentemente pela primeira vez?",
+            en: "What's the coolest thing you've done recently for the first time?",
+            es: "¿Cuál es la cosa más genial que hiciste recientemente por primera vez?",
+            fr: "Quelle est la chose la plus cool que vous avez faite récemment pour la première fois ?",
+            zh: "你最近第一次做的最酷的事是什么？"
+        }
+    },
+    {
+        category: 'experiences',
+        i18n: {
+            pt: "Qual foi a coisa mais gentil que alguém já fez por você?",
+            en: "What's the kindest thing someone has ever done for you?",
+            es: "¿Cuál es la cosa más amable que alguien ha hecho por ti?",
+            fr: "Quelle est la chose la plus gentille que quelqu'un ait jamais faite pour vous ?",
+            zh: "别人为你做过最善良的事是什么？"
+        }
+    },
+
+    // ── preferences (new) ───────────────────────────────────────────
+
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere café ou chá?",
+            en: "Do you prefer coffee or tea?",
+            es: "¿Prefieres café o té?",
+            fr: "Préférez-vous le café ou le thé ?",
+            zh: "你更喜欢咖啡还是茶？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere um jantar em casa ou em um restaurante?",
+            en: "Do you prefer dinner at home or at a restaurant?",
+            es: "¿Prefieres una cena en casa o en un restaurante?",
+            fr: "Préférez-vous dîner à la maison ou au restaurant ?",
+            zh: "你更喜欢在家吃饭还是去餐厅？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere livro físico ou e-book?",
+            en: "Do you prefer physical books or e-books?",
+            es: "¿Prefieres libros físicos o e-books?",
+            fr: "Préférez-vous les livres papier ou les e-books ?",
+            zh: "你更喜欢纸质书还是电子书？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Qual é a sua comfort food favorita?",
+            en: "What's your favorite comfort food?",
+            es: "¿Cuál es tu comida reconfortante favorita?",
+            fr: "Quel est votre plat réconfortant préféré ?",
+            zh: "你最喜欢的安慰食物是什么？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Qual cheiro te traz boas lembranças?",
+            en: "What smell brings back good memories for you?",
+            es: "¿Qué olor te trae buenos recuerdos?",
+            fr: "Quelle odeur vous rappelle de bons souvenirs ?",
+            zh: "什么气味能唤起你的美好回忆？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere assistir filmes no cinema ou em casa?",
+            en: "Do you prefer watching movies at the theater or at home?",
+            es: "¿Prefieres ver películas en el cine o en casa?",
+            fr: "Préférez-vous regarder des films au cinéma ou à la maison ?",
+            zh: "你更喜欢在电影院看电影还是在家看？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Se pudesse receber um ano de assinatura grátis de qualquer serviço, qual escolheria?",
+            en: "If you could get a free one-year subscription to any service, which would you choose?",
+            es: "Si pudieras recibir un año de suscripción gratis a cualquier servicio, ¿cuál elegirías?",
+            fr: "Si vous pouviez obtenir un an d'abonnement gratuit à n'importe quel service, lequel choisiriez-vous ?",
+            zh: "如果你能免费获得任何服务的一年订阅，你会选哪个？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere frio ou calor?",
+            en: "Do you prefer cold or hot weather?",
+            es: "¿Prefieres el frío o el calor?",
+            fr: "Préférez-vous le froid ou la chaleur ?",
+            zh: "你更喜欢冷天还是热天？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Qual é a sua estação do ano favorita e por quê?",
+            en: "What's your favorite season and why?",
+            es: "¿Cuál es tu estación del año favorita y por qué?",
+            fr: "Quelle est votre saison préférée et pourquoi ?",
+            zh: "你最喜欢的季节是什么？为什么？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere planejar tudo com antecedência ou ser espontâneo(a)?",
+            en: "Do you prefer planning everything ahead or being spontaneous?",
+            es: "¿Prefieres planear todo con anticipación o ser espontáneo(a)?",
+            fr: "Préférez-vous tout planifier à l'avance ou être spontané(e) ?",
+            zh: "你更喜欢提前计划一切还是随性而为？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Qual é a sua forma favorita de relaxar depois de um dia cansativo?",
+            en: "What's your favorite way to unwind after a tiring day?",
+            es: "¿Cuál es tu forma favorita de relajarte después de un día agotador?",
+            fr: "Quelle est votre façon préférée de vous détendre après une journée fatigante ?",
+            zh: "累了一天之后，你最喜欢的放松方式是什么？"
+        }
+    },
+    {
+        category: 'preferences',
+        i18n: {
+            pt: "Você prefere viajar de avião, trem ou carro?",
+            en: "Do you prefer traveling by plane, train, or car?",
+            es: "¿Prefieres viajar en avión, tren o coche?",
+            fr: "Préférez-vous voyager en avion, en train ou en voiture ?",
+            zh: "你更喜欢坐飞机、火车还是自驾旅行？"
+        }
+    },
+
+    // ── reflection (new) ────────────────────────────────────────────
+
+    {
+        category: 'reflection',
+        i18n: {
+            pt: "O que você mais valoriza em uma amizade?",
+            en: "What do you value most in a friendship?",
+            es: "¿Qué es lo que más valoras en una amistad?",
+            fr: "Qu'est-ce que vous appréciez le plus dans une amitié ?",
+            zh: "你在友谊中最看重什么？"
+        }
+    },
+    {
+        category: 'reflection',
+        i18n: {
+            pt: "Qual qualidade você mais admira em outras pessoas?",
+            en: "What quality do you admire most in other people?",
+            es: "¿Qué cualidad admiras más en otras personas?",
+            fr: "Quelle qualité admirez-vous le plus chez les autres ?",
+            zh: "你最欣赏别人的什么品质？"
+        }
     }
 ];
