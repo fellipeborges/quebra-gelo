@@ -17,7 +17,6 @@
         <div class="categories" id="categories"></div>
         <p class="question" id="question"></p>
         <button class="btn" id="btn" onclick="pickQuestion()">Nova pergunta</button>
-        <p class="hint" id="hint">ou pressione <kbd id="hint-key">espaço</kbd></p>
     </div>
 
     <a href="https://github.com/fellipeborges/quebra-gelo" target="_blank" class="github-link" id="footer-link">Código fonte</a>
@@ -31,7 +30,7 @@
 
         const questionElement = document.getElementById('question');
         const btnElement = document.getElementById('btn');
-        const hintElement = document.getElementById('hint');
+
         const footerLink = document.getElementById('footer-link');
         const langDropdown = document.getElementById('lang-dropdown');
         const langTrigger = document.getElementById('lang-trigger');
@@ -105,7 +104,7 @@
             document.documentElement.lang = langHtmlAttrs[lang];
             document.title = ui[lang].title;
             btnElement.textContent = ui[lang].btn;
-            hintElement.innerHTML = ui[lang].hint + ' <kbd>' + ui[lang].key + '</kbd>';
+
             footerLink.textContent = ui[lang].footer;
             langTrigger.textContent = langLabels[lang] + ' ▾';
 

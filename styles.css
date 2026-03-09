@@ -104,18 +104,6 @@ body {
     opacity: 0.6;
 }
 
-.hint {
-    display: none;
-    margin-top: 16px;
-    font-size: 0.85rem;
-    opacity: 0.5;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .hint {
-        display: block;
-    }
-}
 
 kbd {
     display: inline-block;

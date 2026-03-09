@@ -2,8 +2,7 @@ const ui = {
     pt: {
         title: "Quebra Gelo",
         btn: "Nova pergunta",
-        hint: "ou pressione",
-        key: "espaço",
+
         footer: "Código fonte",
         categories: {
             hypothetical: "Hipotéticas",
@@ -16,8 +15,7 @@ const ui = {
     en: {
         title: "Ice Breaker",
         btn: "New question",
-        hint: "or press",
-        key: "space",
+
         footer: "Source code",
         categories: {
             hypothetical: "Hypothetical",
@@ -30,8 +28,7 @@ const ui = {
     es: {
         title: "Rompe Hielo",
         btn: "Nueva pregunta",
-        hint: "o presiona",
-        key: "espacio",
+
         footer: "Código fuente",
         categories: {
             hypothetical: "Hipotéticas",
@@ -44,8 +41,7 @@ const ui = {
     fr: {
         title: "Brise-Glace",
         btn: "Nouvelle question",
-        hint: "ou appuyez sur",
-        key: "espace",
+
         footer: "Code source",
         categories: {
             hypothetical: "Hypothétiques",
@@ -58,8 +54,7 @@ const ui = {
     zh: {
         title: "破冰游戏",
         btn: "新问题",
-        hint: "或按下",
-        key: "空格键",
+
         footer: "源代码",
         categories: {
             hypothetical: "假设类",
