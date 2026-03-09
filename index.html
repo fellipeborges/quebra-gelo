@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">EN</button>
+    <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-dropdown-trigger" id="lang-trigger">PT ▾</button>
+        <div class="lang-dropdown-menu" id="lang-menu"></div>
+    </div>
 
     <div class="container">
         <div class="categories" id="categories"></div>
@@ -31,7 +34,9 @@
         const btnElement = document.getElementById('btn');
         const hintElement = document.getElementById('hint');
         const footerLink = document.getElementById('footer-link');
-        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        const langTrigger = document.getElementById('lang-trigger');
+        const langMenu = document.getElementById('lang-menu');
         const categoriesContainer = document.getElementById('categories');
 
         function renderCategories() {
@@ -63,24 +68,51 @@
                 .filter(i => i !== -1);
         }
 
+        const supportedLangs = ['pt', 'en', 'es', 'fr', 'zh'];
+        const langLabels = { pt: 'Português', en: 'English', es: 'Español', fr: 'Français', zh: '中文' };
+        const langHtmlAttrs = { pt: 'pt-BR', en: 'en', es: 'es', fr: 'fr', zh: 'zh' };
+
+        function renderLangMenu() {
+            langMenu.innerHTML = '';
+            for (const lang of supportedLangs) {
+                const item = document.createElement('button');
+                item.className = 'lang-dropdown-item' + (lang === currentLang ? ' selected' : '');
+                item.textContent = langLabels[lang];
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    setLanguage(lang);
+                    closeLangMenu();
+                };
+                langMenu.appendChild(item);
+            }
+        }
+
+        function closeLangMenu() {
+            langDropdown.classList.remove('open');
+        }
+
+        langTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('open');
+            if (langDropdown.classList.contains('open')) renderLangMenu();
+        });
+
+        document.addEventListener('click', () => closeLangMenu());
+
         function setLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('lang', lang);
 
-            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            document.documentElement.lang = langHtmlAttrs[lang];
             document.title = ui[lang].title;
             btnElement.textContent = ui[lang].btn;
             hintElement.innerHTML = ui[lang].hint + ' <kbd>' + ui[lang].key + '</kbd>';
             footerLink.textContent = ui[lang].footer;
-            langToggle.textContent = lang === 'pt' ? 'EN' : 'PT';
+            langTrigger.textContent = langLabels[lang] + ' ▾';
 
             renderCategories();
             currentQuestion = -1;
             pickQuestion();
-        }
-
-        function toggleLanguage() {
-            setLanguage(currentLang === 'pt' ? 'en' : 'pt');
         }
 
         function pickQuestion() {

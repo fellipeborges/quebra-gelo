@@ -26,5 +26,47 @@ const ui = {
             preferences: "Preferences",
             reflection: "Reflection"
         }
+    },
+    es: {
+        title: "Rompe Hielo",
+        btn: "Nueva pregunta",
+        hint: "o presiona",
+        key: "espacio",
+        footer: "Código fuente",
+        categories: {
+            hypothetical: "Hipotéticas",
+            fun: "Divertidas",
+            experiences: "Experiencias",
+            preferences: "Preferencias",
+            reflection: "Reflexión"
+        }
+    },
+    fr: {
+        title: "Brise-Glace",
+        btn: "Nouvelle question",
+        hint: "ou appuyez sur",
+        key: "espace",
+        footer: "Code source",
+        categories: {
+            hypothetical: "Hypothétiques",
+            fun: "Amusantes",
+            experiences: "Expériences",
+            preferences: "Préférences",
+            reflection: "Réflexion"
+        }
+    },
+    zh: {
+        title: "破冰游戏",
+        btn: "新问题",
+        hint: "或按下",
+        key: "空格键",
+        footer: "源代码",
+        categories: {
+            hypothetical: "假设类",
+            fun: "趣味类",
+            experiences: "经历类",
+            preferences: "偏好类",
+            reflection: "反思类"
+        }
     }
 };
