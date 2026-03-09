@@ -122,6 +122,41 @@ kbd {
     border-radius: 4px;
 }
 
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.category-chip {
+    background: none;
+    border: 1px solid currentColor;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.category-chip.active {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    opacity: 1;
+}
+
+.category-chip:hover {
+    opacity: 0.6;
+}
+
+.category-chip.active:hover {
+    opacity: 0.85;
+}
+
 .lang-toggle {
     position: fixed;
     top: 16px;

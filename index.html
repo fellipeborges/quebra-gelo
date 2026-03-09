@@ -11,6 +11,7 @@
     <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">EN</button>
 
     <div class="container">
+        <div class="categories" id="categories"></div>
         <p class="question" id="question"></p>
         <button class="btn" id="btn" onclick="pickQuestion()">Nova pergunta</button>
         <p class="hint" id="hint">ou pressione <kbd id="hint-key">espaço</kbd></p>
@@ -23,13 +24,44 @@
     <script>
         let currentQuestion = -1;
         let currentLang = localStorage.getItem('lang') || 'pt';
+        const categoryIds = ['hypothetical', 'fun', 'experiences', 'preferences', 'reflection'];
+        const activeCategories = new Set(categoryIds);
 
         const questionElement = document.getElementById('question');
         const btnElement = document.getElementById('btn');
         const hintElement = document.getElementById('hint');
-        const hintKeyElement = document.getElementById('hint-key');
         const footerLink = document.getElementById('footer-link');
         const langToggle = document.getElementById('lang-toggle');
+        const categoriesContainer = document.getElementById('categories');
+
+        function renderCategories() {
+            categoriesContainer.innerHTML = '';
+            for (const id of categoryIds) {
+                const chip = document.createElement('button');
+                chip.className = 'category-chip' + (activeCategories.has(id) ? ' active' : '');
+                chip.textContent = ui[currentLang].categories[id];
+                chip.onclick = () => toggleCategory(id);
+                categoriesContainer.appendChild(chip);
+            }
+        }
+
+        function toggleCategory(id) {
+            if (activeCategories.has(id)) {
+                if (activeCategories.size <= 1) return;
+                activeCategories.delete(id);
+            } else {
+                activeCategories.add(id);
+            }
+            renderCategories();
+            currentQuestion = -1;
+            pickQuestion();
+        }
+
+        function getFilteredIndices() {
+            return questionCategories
+                .map((cat, i) => activeCategories.has(cat) ? i : -1)
+                .filter(i => i !== -1);
+        }
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -38,10 +70,11 @@
             document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
             document.title = ui[lang].title;
             btnElement.textContent = ui[lang].btn;
-            hintElement.innerHTML = ui[lang].hint + ' <kbd id="hint-key">' + ui[lang].key + '</kbd>';
+            hintElement.innerHTML = ui[lang].hint + ' <kbd>' + ui[lang].key + '</kbd>';
             footerLink.textContent = ui[lang].footer;
             langToggle.textContent = lang === 'pt' ? 'EN' : 'PT';
 
+            renderCategories();
             currentQuestion = -1;
             pickQuestion();
         }
@@ -51,11 +84,12 @@
         }
 
         function pickQuestion() {
+            const indices = getFilteredIndices();
             const pool = questions[currentLang];
             let next;
             do {
-                next = Math.floor(Math.random() * pool.length);
-            } while (next === currentQuestion && pool.length > 1);
+                next = indices[Math.floor(Math.random() * indices.length)];
+            } while (next === currentQuestion && indices.length > 1);
 
             currentQuestion = next;
 

@@ -102,3 +102,55 @@ const questions = {
         "What's the best concert or live event you've ever been to?"
     ]
 };
+
+const questionCategories = [
+    'hypothetical', // 0
+    'fun',          // 1
+    'hypothetical', // 2
+    'fun',          // 3
+    'preferences',  // 4
+    'preferences',  // 5
+    'preferences',  // 6
+    'preferences',  // 7
+    'experiences',  // 8
+    'fun',          // 9
+    'preferences',  // 10
+    'experiences',  // 11
+    'preferences',  // 12
+    'reflection',   // 13
+    'reflection',   // 14
+    'reflection',   // 15
+    'hypothetical', // 16
+    'fun',          // 17
+    'hypothetical', // 18
+    'hypothetical', // 19
+    'reflection',   // 20
+    'hypothetical', // 21
+    'experiences',  // 22
+    'preferences',  // 23
+    'hypothetical', // 24
+    'fun',          // 25
+    'hypothetical', // 26
+    'reflection',   // 27
+    'hypothetical', // 28
+    'experiences',  // 29
+    'reflection',   // 30
+    'preferences',  // 31
+    'hypothetical', // 32
+    'reflection',   // 33
+    'reflection',   // 34
+    'reflection',   // 35
+    'hypothetical', // 36
+    'reflection',   // 37
+    'fun',          // 38
+    'reflection',   // 39
+    'reflection',   // 40
+    'reflection',   // 41
+    'reflection',   // 42
+    'reflection',   // 43
+    'reflection',   // 44
+    'reflection',   // 45
+    'reflection',   // 46
+    'hypothetical', // 47
+    'experiences',  // 48
+];
