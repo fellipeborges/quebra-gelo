@@ -27,8 +27,7 @@
     <script>
         let currentQuestion = -1;
         let currentLang = localStorage.getItem('lang') || 'pt';
-        const categoryIds = ['hypothetical', 'fun', 'experiences', 'preferences', 'reflection'];
-        const activeCategories = new Set(categoryIds);
+        const activeCategories = new Set(categories);
 
         const questionElement = document.getElementById('question');
         const btnElement = document.getElementById('btn');
@@ -41,7 +40,7 @@
 
         function renderCategories() {
             categoriesContainer.innerHTML = '';
-            for (const id of categoryIds) {
+            for (const id of categories) {
                 const chip = document.createElement('button');
                 chip.className = 'category-chip' + (activeCategories.has(id) ? ' active' : '');
                 chip.textContent = ui[currentLang].categories[id];
@@ -63,8 +62,8 @@
         }
 
         function getFilteredIndices() {
-            return questionCategories
-                .map((cat, i) => activeCategories.has(cat) ? i : -1)
+            return questions
+                .map((q, i) => activeCategories.has(q.category) ? i : -1)
                 .filter(i => i !== -1);
         }
 
@@ -117,7 +116,6 @@
 
         function pickQuestion() {
             const indices = getFilteredIndices();
-            const pool = questions[currentLang];
             let next;
             do {
                 next = indices[Math.floor(Math.random() * indices.length)];
@@ -129,7 +127,7 @@
             questionElement.classList.add('exit');
 
             setTimeout(() => {
-                questionElement.textContent = pool[next];
+                questionElement.textContent = questions[next].i18n[currentLang];
                 questionElement.classList.remove('exit');
                 questionElement.classList.add('enter');
             }, 150);
