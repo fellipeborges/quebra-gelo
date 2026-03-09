@@ -10,6 +10,14 @@ const ui = {
             experiences: "Experiências",
             preferences: "Preferências",
             reflection: "Reflexão"
+        },
+        themes: {
+            auto: "Auto",
+            light: "Claro",
+            dark: "Escuro",
+            ocean: "Oceano",
+            sunset: "Pôr do Sol",
+            lavender: "Lavanda"
         }
     },
     en: {
@@ -23,6 +31,14 @@ const ui = {
             experiences: "Experiences",
             preferences: "Preferences",
             reflection: "Reflection"
+        },
+        themes: {
+            auto: "Auto",
+            light: "Light",
+            dark: "Dark",
+            ocean: "Ocean",
+            sunset: "Sunset",
+            lavender: "Lavender"
         }
     },
     es: {
@@ -36,6 +52,14 @@ const ui = {
             experiences: "Experiencias",
             preferences: "Preferencias",
             reflection: "Reflexión"
+        },
+        themes: {
+            auto: "Auto",
+            light: "Claro",
+            dark: "Oscuro",
+            ocean: "Océano",
+            sunset: "Atardecer",
+            lavender: "Lavanda"
         }
     },
     fr: {
@@ -49,6 +73,14 @@ const ui = {
             experiences: "Expériences",
             preferences: "Préférences",
             reflection: "Réflexion"
+        },
+        themes: {
+            auto: "Auto",
+            light: "Clair",
+            dark: "Sombre",
+            ocean: "Océan",
+            sunset: "Coucher de soleil",
+            lavender: "Lavande"
         }
     },
     zh: {
@@ -62,6 +94,14 @@ const ui = {
             experiences: "经历类",
             preferences: "偏好类",
             reflection: "反思类"
+        },
+        themes: {
+            auto: "自动",
+            light: "浅色",
+            dark: "深色",
+            ocean: "海洋",
+            sunset: "日落",
+            lavender: "薰衣草"
         }
     }
 };

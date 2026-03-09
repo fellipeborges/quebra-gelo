@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="theme-dropdown" id="theme-dropdown">
+        <button class="theme-dropdown-trigger" id="theme-trigger">Auto ▾</button>
+        <div class="theme-dropdown-menu" id="theme-menu"></div>
+    </div>
+
     <div class="lang-dropdown" id="lang-dropdown">
         <button class="lang-dropdown-trigger" id="lang-trigger">PT ▾</button>
         <div class="lang-dropdown-menu" id="lang-menu"></div>
@@ -35,6 +40,7 @@
 
         let currentQuestion = -1;
         let currentLang = getCookie('lang') || 'pt';
+        let currentTheme = getCookie('theme') || 'auto';
 
         const savedCategories = getCookie('categories');
         const activeCategories = savedCategories
@@ -50,6 +56,10 @@
         const langTrigger = document.getElementById('lang-trigger');
         const langMenu = document.getElementById('lang-menu');
         const categoriesContainer = document.getElementById('categories');
+
+        const themeDropdown = document.getElementById('theme-dropdown');
+        const themeTrigger = document.getElementById('theme-trigger');
+        const themeMenu = document.getElementById('theme-menu');
 
         function saveCategories() {
             setCookie('categories', [...activeCategories].join(','));
@@ -110,11 +120,78 @@
 
         langTrigger.addEventListener('click', (e) => {
             e.stopPropagation();
+            closeThemeMenu();
             langDropdown.classList.toggle('open');
             if (langDropdown.classList.contains('open')) renderLangMenu();
         });
 
-        document.addEventListener('click', () => closeLangMenu());
+        const themeIds = ['auto', 'light', 'dark', 'ocean', 'sunset', 'lavender'];
+        const themeDotColors = {
+            auto: null,
+            light: '#ffffff',
+            dark: '#111111',
+            ocean: '#3498db',
+            sunset: '#e67e22',
+            lavender: '#9b59b6'
+        };
+
+        function applyTheme(theme) {
+            if (theme === 'auto') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+        }
+
+        function renderThemeMenu() {
+            themeMenu.innerHTML = '';
+            for (const id of themeIds) {
+                const item = document.createElement('button');
+                item.className = 'theme-dropdown-item' + (id === currentTheme ? ' selected' : '');
+
+                const dotColor = themeDotColors[id];
+                if (dotColor) {
+                    const dot = document.createElement('span');
+                    dot.className = 'theme-dot';
+                    dot.style.background = dotColor;
+                    if (id === 'light') dot.style.border = '1px solid #ccc';
+                    item.appendChild(dot);
+                }
+
+                const label = document.createTextNode(ui[currentLang].themes[id]);
+                item.appendChild(label);
+
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    setTheme(id);
+                    closeThemeMenu();
+                };
+                themeMenu.appendChild(item);
+            }
+        }
+
+        function closeThemeMenu() {
+            themeDropdown.classList.remove('open');
+        }
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            setCookie('theme', theme);
+            applyTheme(theme);
+            themeTrigger.textContent = ui[currentLang].themes[theme] + ' ▾';
+        }
+
+        themeTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeLangMenu();
+            themeDropdown.classList.toggle('open');
+            if (themeDropdown.classList.contains('open')) renderThemeMenu();
+        });
+
+        document.addEventListener('click', () => {
+            closeLangMenu();
+            closeThemeMenu();
+        });
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -126,6 +203,7 @@
 
             footerLink.textContent = ui[lang].footer;
             langTrigger.textContent = langLabels[lang] + ' ▾';
+            themeTrigger.textContent = ui[lang].themes[currentTheme] + ' ▾';
 
             renderCategories();
             currentQuestion = -1;
@@ -165,6 +243,7 @@
             }
         });
 
+        applyTheme(currentTheme);
         setLanguage(currentLang);
     </script>
 </body>

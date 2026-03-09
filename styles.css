@@ -20,6 +20,41 @@
     }
 }
 
+:root[data-theme="light"] {
+    --bg: #ffffff;
+    --text: #111111;
+    --btn-bg: #111111;
+    --btn-text: #ffffff;
+}
+
+:root[data-theme="dark"] {
+    --bg: #111111;
+    --text: #ffffff;
+    --btn-bg: #ffffff;
+    --btn-text: #111111;
+}
+
+:root[data-theme="ocean"] {
+    --bg: #0d1f3c;
+    --text: #ccdcef;
+    --btn-bg: #3498db;
+    --btn-text: #ffffff;
+}
+
+:root[data-theme="sunset"] {
+    --bg: #2a1506;
+    --text: #f5d6b8;
+    --btn-bg: #e67e22;
+    --btn-text: #ffffff;
+}
+
+:root[data-theme="lavender"] {
+    --bg: #1a0f2e;
+    --text: #d8c8f0;
+    --btn-bg: #9b59b6;
+    --btn-text: #ffffff;
+}
+
 html, body {
     height: 100%;
 }
@@ -217,6 +252,86 @@ kbd {
 
 .lang-dropdown-item + .lang-dropdown-item {
     border-top: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+}
+
+.theme-dropdown {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+}
+
+.theme-dropdown-trigger {
+    background: none;
+    border: 1px solid currentColor;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.theme-dropdown-trigger:hover,
+.theme-dropdown.open .theme-dropdown-trigger {
+    opacity: 1;
+}
+
+.theme-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 6px;
+    overflow: hidden;
+    display: none;
+    min-width: 140px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-dropdown.open .theme-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-dropdown-item {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    text-align: left;
+    opacity: 0.5;
+    transition: background 0.15s ease, opacity 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-dropdown-item:hover {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    opacity: 1;
+}
+
+.theme-dropdown-item.selected {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.theme-dropdown-item + .theme-dropdown-item {
+    border-top: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+}
+
+.theme-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .github-link {
